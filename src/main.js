@@ -8,3 +8,9 @@ console.log(logo);
 new Vue({
   render: (h) => h(App),
 }).$mount("#vue-app");
+
+
+
+const ao = () => {
+  
+}
