@@ -1,11 +1,11 @@
-import Vue from "vue";
-import App from "./App.vue";
+import Vue from 'vue';
+import App from './App.vue';
 
-import router from './router/index.js'
-import store from './store/index.js'
+import router from './router/index';
+import store from './store/index';
 
 new Vue({
-  router ,
-  store ,  
+  router,
+  store,
   render: (h) => h(App),
-}).$mount("#vue-app");
+}).$mount('#vue-app');
