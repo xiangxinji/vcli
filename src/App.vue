@@ -8,6 +8,8 @@
               this is customer title 
           </span>
       </div>
+      <img src="~@/assets/images/logo.gif" />
+      <img src="~@/assets/images/test.jpg" />
   </div>
 </template>
 

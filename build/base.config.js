@@ -15,14 +15,27 @@ module.exports = {
   entry: resolveEntryDir("main.js"),
   output: {
     path: resolveOutput(),
-    filename: "bundle.js",
+    filename: "js/[name].js",
   },
   module: {
     rules: [
       // vue
       {
-        test: /.vue$/,
+        test: /\.vue$/,
         loader: "vue-loader",
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 8192,
+              esModule: false,
+              name: "imgs/[name].[ext]",
+            },
+          },
+        ],
       },
     ],
   },
