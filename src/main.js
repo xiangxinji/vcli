@@ -12,5 +12,7 @@ new Vue({
 
 
 const ao = () => {
-  
+
 }
+
+Promise.resolve(1)
