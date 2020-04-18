@@ -7,8 +7,8 @@ const config = {
   module: {
     rules: [
       {
-        test: /.css$/,
-        loader: [miniCssExtractPlugin.loader, "css-loader"],
+        test: /.s?css$/,
+        loader: [miniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
     ],
   },
