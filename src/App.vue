@@ -1,31 +1,14 @@
 <template>
-  <div>
-      <h1>
-          this is customer build project 
-      </h1>
-      <div class="title">
-          <span>
-              this is customer title 
-          </span>
-      </div>
-      <img src="~@/assets/images/logo.gif" />
-      <img src="~@/assets/images/test.jpg" />
+  <div class="view">
+    <router-link to="/">Home</router-link>
+    <router-link to="/target">Target</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style lang="scss">
-h1{
-    color : red ; 
-}
-.title {
-    span{
-        color : blue ; 
-    }
-}
 </style>

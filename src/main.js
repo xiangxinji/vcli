@@ -1,18 +1,9 @@
 import Vue from "vue";
 import App from "./App.vue";
 
-import logo from '@/assets/images/logo.gif'
-import env from "@env";
-console.log(logo);
+import router from './router/index.js'
 
 new Vue({
+  router , 
   render: (h) => h(App),
 }).$mount("#vue-app");
-
-
-
-const ao = () => {
-
-}
-
-Promise.resolve(1)
