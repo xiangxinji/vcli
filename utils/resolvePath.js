@@ -1,9 +1,9 @@
 const path = require("path");
 
-module.exports.resolveRootDir = () => {
-  return path.resolve("./");
+module.exports.resolveRootDir = (filename) => {
+  return path.resolve("./" + filename);
 };
-module.exports.resultEntryDir = (fileName = "") => {
+module.exports.resolveEntryDir = (fileName = "") => {
   return path.resolve("./src/" + fileName);
 };
 module.exports.resolveOutput = () => {

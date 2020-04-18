@@ -5,13 +5,14 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const {
   resolveOutput,
-  resultEntryDir,
+  resolveEntryDir,
   resolvePublic,
+  resolveRootDir,
 } = require("../utils/resolvePath");
 const baseConfig = require("../config/baseConfig")();
 
 module.exports = {
-  entry: resultEntryDir("main.js"),
+  entry: resolveEntryDir("main.js"),
   output: {
     path: resolveOutput(),
     filename: "bundle.js",
@@ -28,6 +29,8 @@ module.exports = {
   resolve: {
     alias: {
       vue: "vue/dist/vue.esm.js",
+      "@": resolveEntryDir(),
+      "@env": resolveRootDir("env"),
     },
   },
   plugins: [
