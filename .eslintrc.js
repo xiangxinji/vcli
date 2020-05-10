@@ -8,7 +8,11 @@ module.exports = {
   // 优先使用 aribnb 和 eslint-plugin-vue中的essential  规则
   extends: ["airbnb-base", "plugin:vue/essential"],
   // 可以在这里定义全局变量， 例如 document
-  globals: {},
+  globals: {
+    describe: true,  
+    it : true,
+    expect: true  
+  },
   // 转换器的参数
   parserOptions: {
     ecmaVersion: 2018,
