@@ -1,6 +1,7 @@
 const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const {
   resolveOutput,
   resolveEntryDir,
@@ -58,5 +59,6 @@ module.exports = {
       template: resolvePublic("index.html"),
     }),
     new VueLoaderPlugin(),
+    new CopyPlugin([{ from: "static", to: "./" }]),
   ],
 };

@@ -3,7 +3,7 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es6: true,
+    node: true,
   },
   // 优先使用 aribnb 和 eslint-plugin-vue中的essential  规则
   extends: ["airbnb-base", "plugin:vue/essential"],

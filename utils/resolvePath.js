@@ -1,14 +1,7 @@
-const path = require("path");
+// eslint-disable-next-line import/no-extraneous-dependencies
+const path = require('path');
 
-module.exports.resolveRootDir = (filename) => {
-  return path.resolve("./" + filename);
-};
-module.exports.resolveEntryDir = (fileName = "") => {
-  return path.resolve("./src/" + fileName);
-};
-module.exports.resolveOutput = () => {
-  return path.resolve("./dist");
-};
-module.exports.resolvePublic = (fileName = "") => {
-  return path.resolve("./public/" + fileName);
-};
+module.exports.resolveRootDir = (filename) => path.resolve(`./${filename}`);
+module.exports.resolveEntryDir = (fileName = '') => path.resolve(`./src/${fileName}`);
+module.exports.resolveOutput = () => path.resolve('./dist');
+module.exports.resolvePublic = (fileName = '') => path.resolve(`./public/${fileName}`);
