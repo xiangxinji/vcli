@@ -1,10 +1,16 @@
 
 <template>
-  <div>一个测试组件</div>
+  <div>{{ message }}</div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    message: {
+      type: String,
+    },
+  },
+};
 </script>
 
 <style>
